@@ -66,7 +66,7 @@ func (f *SyncFilter) Deny(contentID []byte) {
 // Filter returns true if the message is not a synchronisation message, or the
 // content ID is not expected.
 func (f *SyncFilter) Filter(from id.Signatory, msg wire.Msg) bool {
-	if msg.Type != wire.MsgTypeSync {
+	/* if msg.Type != wire.MsgTypeSync {
 		return true
 	}
 
@@ -76,6 +76,6 @@ func (f *SyncFilter) Filter(from id.Signatory, msg wire.Msg) bool {
 	_, ok := f.expecting[string(msg.Data)]
 	if !ok {
 		return true
-	}
+	} */
 	return false
 }
